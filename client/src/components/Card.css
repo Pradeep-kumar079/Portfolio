@@ -1,0 +1,137 @@
+/* =========================
+   MAIN CONTAINER
+========================= */
+.card-container {
+  /* width: 100%; */
+  /* margin: 0 auto; */
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  border: 1px solid #c7d5f0;
+  border-radius: 14px;
+  background: linear-gradient(225deg, #d3c58e, #dabc45);
+}
+
+/* =========================
+   TEXT SECTION
+========================= */
+.txts h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #f1f3f6;
+}
+
+.hirebtn{
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #1e3a8a;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.hirebtn:hover {
+  background-color: #93c5fd;
+}
+.txts h2 br {
+  display: block;
+  margin-top: 40px;
+}
+
+/* =========================
+   IMAGE SECTION
+========================= */
+.imags {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.myimg {
+  width: 400px;
+  height: 500px;
+  /* border-radius: 50%; */
+  /* overflow: hidden; */
+  /* background: linear-gradient(135deg, #3b82f6, #1e40af); */
+  /* padding: 6px; */
+}
+
+.myimg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* border-radius: 50%;
+  background: #fff; */
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .card-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .txts h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .txts h2 {
+    font-size: 1.9rem;
+    margin-top: 100px;
+  }
+
+  .myimg {
+    width: 220px;
+    height: 220px;
+  }
+}
+.rsume{
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  width: 250px;
+  color: #fff;
+  background-color: #1e3a8a;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.resumebtn{
+  display: inline-block;
+  /* margin-top: 20px; */
+  /* padding: 12px 24px; */
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.resumebtn:hover {
+  background-color: #115db4;
+}
+.resumebtn a {
+  color: #fff;
+  text-decoration: none;
+}
+.btns{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.hirebtn{
+  width: 150px;
+}

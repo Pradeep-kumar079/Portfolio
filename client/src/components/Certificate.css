@@ -1,0 +1,64 @@
+Container
+.certificates {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Section title */
+h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #222;
+}
+
+/* Certificate Card */
+.certificate-item {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+/* Hover effect */
+.certificate-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* Certificate Title */
+.certificate-item h4 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* Issued By */
+.certificate-item p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Certificate Link */
+.certificate-item a {
+  display: inline-block;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Link Hover */
+.certificate-item a:hover {
+  background: linear-gradient(135deg, #4338ca, #4f46e5);
+  transform: scale(1.05);
+}

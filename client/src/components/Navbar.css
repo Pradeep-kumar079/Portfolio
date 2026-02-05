@@ -1,0 +1,162 @@
+/* =========================
+   NAVBAR BASE
+========================= */
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(90%, 1100px);
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 28px;
+  background: #ffffff;
+  border-radius: 14px;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+/* =========================
+   LOGO
+========================= */
+.logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  cursor: pointer;
+}
+
+/* =========================
+   NAV LINKS (DESKTOP)
+========================= */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.nav-links li a {
+  color: #1e3a8a;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* underline animation */
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #2563eb;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #2563eb;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   HAMBURGER
+========================= */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background: #1e3a8a;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* hamburger animation */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* =========================
+   TABLET & MOBILE
+========================= */
+@media (max-width: 900px) {
+  .navbar {
+    height: 58px;
+    padding: 0 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    gap: 26px;
+    padding: 28px 0;
+
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+
+  .nav-links.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .nav-links li a {
+    font-size: 1.1rem;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+@media (max-width: 480px) {
+  .navbar {
+    height: 56px;
+    padding: 0 18px;
+  }
+
+  .logo {
+    font-size: 1.15rem;
+  }
+}
