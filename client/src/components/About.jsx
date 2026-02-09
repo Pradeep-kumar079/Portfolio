@@ -225,7 +225,7 @@ const About = () => {
         <h3>Contact Me</h3>
          <div className="phone">
           <img src="../assets/phone.png" alt="Phone Icon" />
-          <span>+123-456-7890</span>
+          <span>+91 9353198519</span>
         </div>
         <div className="email">
           <img src="../assets/email.png" alt="Email Icon" />
@@ -234,7 +234,7 @@ const About = () => {
 
         <div className="github">
           <img src="../assets/githu.png" alt="GitHub Icon" />
-          <span>github.com/pradeep</span>
+          <span>https://github.com/Pradeep-kumar079</span>
         </div>
 
         <div className="linkdin">
