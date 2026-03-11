@@ -1,38 +1,176 @@
-/* Contact Section Wrapper */
-.contact {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 30px;
-  background: #ffffff;
-  border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  text-align: center;
+/* =========================
+   SECTION
+========================= */
+
+.contact-section{
+  width:100%;
+  padding:80px 60px;
+  background:#1b4b36;
+  box-sizing:border-box;
+  text-align:center;
+  margin-top:20px;
+  border-radius:8px;
 }
 
-/* Heading */
-.contact h3 {
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #222;
+.contact-title{
+  font-size:42px;
+  color:white;
+  margin-bottom:40px;
 }
 
-/* Text */
-.contact p {
-  font-size: 16px;
-  color: #555;
-  margin: 10px 0;
+
+/* =========================
+   CONTAINER
+========================= */
+
+.contact-container{
+  max-width:800px;
+  margin:auto;
+
+  display:flex;
+  flex-direction:column;
+  gap:25px;
 }
 
-/* Links */
-.contact a {
-  color: #4f46e5;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
+
+/* =========================
+   CARD
+========================= */
+
+.contact-box{
+  background:white;
+  padding:18px 22px;
+  border-radius:16px;
+
+  display:flex;
+  align-items:center;
+  gap:20px;
+
+  box-shadow:0 15px 35px rgba(0,0,0,.1);
+  transition:.3s;
 }
 
-/* Link Hover */
-.contact a:hover {
-  color: #4338ca;
-  text-decoration: underline;
+.contact-box:hover{
+  transform:translateY(-6px);
+  box-shadow:0 25px 55px rgba(29,121,74,.25);
+}
+
+
+/* =========================
+   ICON
+========================= */
+
+.icon{
+  width:42px;
+  height:42px;
+
+  background:#4b9a71;
+  color:white;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+  font-size:20px;
+  flex-shrink:0;
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+.contact-box h3{
+  margin:0;
+  font-size:18px;
+  color:#111827;
+}
+
+.contact-box p{
+  margin:0;
+  color:#6b7280;
+}
+
+.contact-box a{
+  color:#1d794a;
+  text-decoration:none;
+  font-weight:600;
+}
+
+
+/* =========================
+   📱 TABLET
+========================= */
+
+@media (max-width:900px){
+
+  .contact-section{
+    padding:60px 40px;
+  }
+
+  .contact-title{
+    font-size:34px;
+  }
+
+}
+
+
+/* =========================
+   📱 MOBILE
+========================= */
+
+@media (max-width:600px){
+
+  .contact-section{
+    padding:50px 20px;
+  }
+
+  .contact-title{
+    font-size:28px;
+    margin-bottom:30px;
+  }
+
+  .contact-container{
+    gap:18px;
+  }
+
+  .contact-box{
+    padding:14px 16px;
+    gap:15px;
+  }
+
+  .icon{
+    width:34px;
+    height:34px;
+    font-size:16px;
+  }
+
+  .contact-box h3{
+    font-size:16px;
+  }
+
+  .contact-box p,
+  .contact-box a{
+    font-size:14px;
+  }
+
+}
+
+
+/* =========================
+   📱 VERY SMALL MOBILE
+========================= */
+
+@media (max-width:400px){
+
+  .contact-box{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .icon{
+    margin-bottom:5px;
+  }
+
 }

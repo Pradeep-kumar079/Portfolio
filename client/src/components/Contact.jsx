@@ -1,25 +1,48 @@
 import React from 'react'
-import "./Contact.css"
+import './Contact.css'
+
+import { MdEmail } from "react-icons/md"
+import { FaPhoneAlt, FaLinkedin, FaGithub } from "react-icons/fa"
 
 const Contact = () => {
   return (
-    <div className="contact">
-      <h3>Contact Me</h3>
-      <p>Email: pradeep@example.com</p>
-      <p>Phone: +1234567890</p>
-      <p>
-        LinkedIn: 
-        <a href="https://www.linkedin.com/in/pradeep" target="_blank" rel="noopener noreferrer">
-          linkedin.com/in/pradeep
-        </a>
-      </p>
-      <p>
-        GitHub: 
-        <a href="https://github.com/pradeep" target="_blank" rel="noopener noreferrer">
-          github.com/pradeep
-        </a>
-      </p>
-    </div>
+    <section className="contact-section" id="contact">
+
+      <h2 className="contact-title">Get In Touch</h2>
+
+      <div className="contact-container">
+
+        <div className="contact-box">
+          <div className="icon"><MdEmail /></div>
+          <h3>Email</h3>
+          <p>pradeepk9348@gmail.com</p>
+        </div>
+
+        <div className="contact-box">
+          <div className="icon"><FaPhoneAlt /></div>
+          <h3>Phone</h3>
+          <p>+91 9353198519</p>
+        </div>
+
+        <div className="contact-box">
+          <div className="icon"><FaLinkedin /></div>
+          <h3>LinkedIn</h3>
+          <a href="https://www.linkedin.com/in/pradeep-kumar-56688725b/" target="_blank" rel="noreferrer">
+            View Profile
+          </a>
+        </div>
+
+        <div className="contact-box">
+          <div className="icon"><FaGithub /></div>
+          <h3>GitHub</h3>
+          <a href="https://github.com/Pradeep-kumar079" target="_blank" rel="noreferrer">
+            View Projects
+          </a>
+        </div>
+
+      </div>
+
+    </section>
   )
 }
 

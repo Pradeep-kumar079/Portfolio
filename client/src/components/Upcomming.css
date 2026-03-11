@@ -1,0 +1,152 @@
+.roadmap-section{
+  margin-top:30px;
+  padding:100px 80px;
+  background-color:#c2d0c8;
+  border-radius:8px;
+}
+
+.roadmap-section h2{
+  text-align:center;
+  font-size:38px;
+  color:#104629;
+  margin-bottom:70px;
+}
+
+/* TIMELINE */
+.timeline{
+  position:relative;
+  max-width:800px;
+  margin:auto;
+}
+
+/* LINE */
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:10px;
+  top:0;
+  bottom:0;
+  width:4px;
+  background:#104629;
+}
+
+/* ITEM */
+.timeline-item{
+  display:flex;
+  gap:30px;
+  margin-bottom:60px;
+  position:relative;
+}
+
+/* DOT */
+.dot{
+  width:22px;
+  height:22px;
+  background:#104629;
+  border-radius:50%;
+  flex-shrink:0;
+  margin-top:8px;
+}
+
+/* CONTENT */
+.content{
+  background:white;
+  padding:22px 28px;
+  width:100%;
+  border-radius:16px;
+  box-shadow:0 15px 35px rgba(0,0,0,.12);
+  transition:.3s;
+}
+
+.content:hover{
+  transform:translateY(-6px);
+}
+
+.content h3{
+  color:#104629;
+  margin-bottom:8px;
+}
+
+.content p{
+  color:#374151;
+  line-height:1.7;
+}
+
+/* =========================
+   📱 TABLET
+========================= */
+@media (max-width:900px){
+
+  .roadmap-section{
+    padding:70px 40px;
+  }
+
+  .roadmap-section h2{
+    font-size:32px;
+    margin-bottom:50px;
+  }
+
+  .timeline-item{
+    gap:20px;
+  }
+
+}
+
+/* =========================
+   📱 MOBILE
+========================= */
+@media (max-width:600px){
+
+  .roadmap-section{
+    padding:50px 20px;
+  }
+
+  .roadmap-section h2{
+    font-size:26px;
+    margin-bottom:40px;
+  }
+
+  .timeline::before{
+    left:7px;
+  }
+
+  .dot{
+    width:16px;
+    height:16px;
+  }
+
+  .timeline-item{
+    gap:15px;
+    margin-bottom:35px;
+  }
+
+  .content{
+    padding:16px 18px;
+    border-radius:12px;
+  }
+
+  .content h3{
+    font-size:17px;
+  }
+
+  .content p{
+    font-size:14px;
+    line-height:1.5;
+  }
+
+}
+
+/* =========================
+   📱 VERY SMALL MOBILE
+========================= */
+@media (max-width:400px){
+
+  .content h3{
+    font-size:15px;
+  }
+
+  .content p{
+    font-size:13px;
+  }
+
+}

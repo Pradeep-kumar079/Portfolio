@@ -1,0 +1,180 @@
+/* =========================
+   MAIN PROJECT SECTION
+========================= */
+.container{
+  width:100%;
+  background:#c2d0c8;
+  display:flex;
+  gap:30px;
+  padding:clamp(20px,4vw,50px);
+  border-radius:8px;
+  box-sizing:border-box;
+}
+
+
+/* =========================
+   LEFT SIDEBAR (TABS)
+========================= */
+
+.left{
+  width:260px;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+.item{
+  padding:14px 20px;
+  background:#ffffff;
+  border-radius:12px;
+  cursor:pointer;
+  font-weight:500;
+
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  transition:.3s;
+  white-space:nowrap;
+}
+
+.item:hover{
+  transform:translateX(6px);
+}
+
+.item.active{
+  background:#1f5c45;
+  color:white;
+}
+
+
+/* =========================
+   RIGHT CONTENT AREA
+========================= */
+
+.right{
+  flex:1;
+  background:#ffffff;
+  border-radius:18px;
+  box-shadow:0 25px 60px rgba(0,0,0,.12);
+  padding:clamp(20px,3vw,50px);
+}
+
+
+/* =========================
+   PROJECT TITLE
+========================= */
+
+.project h3{
+  font-size:clamp(22px,3vw,32px);
+  margin-bottom:20px;
+  color:#214a34;
+  text-align:center;
+}
+
+
+/* =========================
+   PROJECT TEXT
+========================= */
+
+.project-text{
+  max-width:900px;
+  margin:auto;
+}
+
+.project-text p{
+  font-size:clamp(14px,1.2vw,18px);
+  line-height:1.8;
+  color:#1e4538;
+}
+
+.tech{
+  margin-top:14px;
+  font-weight:600;
+  color:#1c4333;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.project-text a{
+  display:inline-block;
+  margin-top:24px;
+  padding:12px 28px;
+
+  background:#1c4333;
+  color:white;
+
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:500;
+  transition:.3s;
+}
+
+.project-text a:hover{
+  transform:scale(1.05);
+}
+
+
+/* =========================
+   📱 TABLET
+========================= */
+
+@media(max-width:1024px){
+
+  .container{
+    flex-direction:column;
+  }
+
+  .left{
+    width:100%;
+    flex-direction:row;
+    overflow-x:auto;
+    padding-bottom:10px;
+  }
+
+  .item{
+    min-width:140px;
+    text-align:center;
+  }
+
+}
+
+
+/* =========================
+   📱 MOBILE
+========================= */
+
+@media(max-width:600px){
+
+  .container{
+    padding:20px;
+  }
+
+  .right{
+    padding:20px;
+  }
+
+  .project-text p{
+    line-height:1.6;
+  }
+
+  .project-text a{
+    padding:10px 22px;
+    font-size:14px;
+  }
+
+}
+
+
+/* =========================
+   📱 VERY SMALL MOBILE
+========================= */
+
+@media(max-width:400px){
+
+  .item{
+    min-width:120px;
+    font-size:14px;
+  }
+
+}

@@ -1,51 +1,27 @@
 import React from 'react'
+// import './Card.css'
 import Navbar from './Navbar'
-import './Card.css'
-// import Certificate from './Certificate'
 import About from './About'
+import Projects from './Projects'
+import Certificate from './Certificate'
+import Skills from './Skills'
+import Upcomming from './Upcomming'
+import Contact from './Contact'
+import Poster from './Poster'
 
 const Card = () => {
   return (
-    <div>
+    <div className="card-container">
 
-      <div className="nav">
-        <Navbar />
-      </div>
+      <Navbar />
+      <Poster />
+      <About />
+      <Projects />
+      <Certificate />
+      <Skills />
+      <Upcomming />
+      <Contact />
 
-      <div className="card-container">
-        <div className="txts">
-          <h2>HY! I AM PRADEEP,
-          <br /> FULL STACK DEVELOPER
-          </h2>
-
-          <div className="btns">
-            <div className="rsume">
-            <button className="resumebtn">
-              <a href="../assets/Resume.pdf" download="Resume.pdf">
-                Download Resume
-              </a>
-            </button>
-          </div>
-
-          <button className="hirebtn">Hire Me</button>
-          </div>
-        </div>
-
-        <div className="imags">
-
-          <div className="myimg">
-            <img src="../assets/imag.png" alt="My Image" />
-          </div>
-        </div>
-      </div>
-
-      {/* <About /> */}
-
-      {/* <div className="certificates">
-        <Certificate />
-      </div> */}
-
-      
     </div>
   )
 }
