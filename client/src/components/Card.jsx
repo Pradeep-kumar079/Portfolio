@@ -8,6 +8,7 @@ import Skills from './Skills'
 import Upcomming from './Upcomming'
 import Contact from './Contact'
 import Poster from './Poster'
+import Footer from './Footer'
 
 const Card = () => {
   return (
@@ -21,6 +22,7 @@ const Card = () => {
       <Skills />
       <Upcomming />
       <Contact />
+      <Footer />
 
     </div>
   )

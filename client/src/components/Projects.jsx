@@ -7,6 +7,7 @@ const Projects = () => {
 
   return (
     <div className='container' id='projects'>
+      
 
       <div className="left">
 
@@ -34,6 +35,9 @@ const Projects = () => {
       </div>
 
       <div className="right">
+
+        <h3>My Works</h3>
+
 
         {activeProject === "ecommerce" && (
           <div>
@@ -128,7 +132,7 @@ const Projects = () => {
               </p>
 
               <a
-                href="https://e-commerce-frontend-u0z8.onrender.com"
+                href="https://travels-frontend.onrender.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
