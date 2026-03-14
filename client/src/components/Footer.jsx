@@ -23,7 +23,7 @@ const Footer = () => {
 
       <div className="footer-info">
         <h2>Pradeep</h2>
-        <p>Full Stack Developer Portfolio</p>
+        <p>Full Stack Developer and Flutter Developer</p>
       </div>
 
       <div className="footer-contact">
