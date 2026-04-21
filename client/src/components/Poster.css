@@ -62,7 +62,7 @@
   padding: 6px 14px;
   border-radius: 20px;
   border: 1px solid rgba(74,222,128,0.2);
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   animation: fadeUp 0.6s var(--ease) both;
 }
 
@@ -99,6 +99,7 @@
   max-width: 480px;
   margin-bottom: 36px;
   animation: fadeUp 0.6s 0.2s var(--ease) both;
+  margin-top: 30px;
 }
 
 .poster-actions {
