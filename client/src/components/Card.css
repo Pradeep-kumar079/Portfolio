@@ -1,0 +1,84 @@
+/* ============================================================
+   PORTFOLIO — GLOBAL TOKENS
+   Aesthetic: Dark Forest — deep greens, warm cream accents,
+   Syne display + DM Sans body, editorial spacing
+   ============================================================ */
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap");
+
+:root {
+  /* Palette */
+  --bg:           #0b1510;
+  --bg-2:         #0f1e17;
+  --bg-card:      #132019;
+  --bg-surface:   #1a2d22;
+  --border:       rgba(255,255,255,0.07);
+  --border-hover: rgba(255,255,255,0.14);
+
+  /* Text */
+  --text-primary:   #e8f0eb;
+  --text-secondary: rgba(232,240,235,0.55);
+  --text-muted:     rgba(232,240,235,0.32);
+
+  /* Accent */
+  --accent:       #4ade80;
+  --accent-dim:   rgba(74,222,128,0.12);
+  --accent-glow:  rgba(74,222,128,0.22);
+  --gold:         #c9a96e;
+  --gold-dim:     rgba(201,169,110,0.1);
+
+  /* Typography */
+  --font-display: "Syne", sans-serif;
+  --font-body:    "DM Sans", sans-serif;
+
+  /* Spacing */
+  --section-pad: clamp(64px, 8vw, 120px) clamp(20px, 8vw, 100px);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+
+  /* Transitions */
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Shared section heading style */
+.section-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-bottom: clamp(40px, 6vw, 80px);
+}
+
+.section-heading span { color: var(--accent); }
+
+/* Accent pill label */
+.pill-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent-dim);
+  color: var(--accent);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(74,222,128,0.2);
+  margin-bottom: 16px;
+}
