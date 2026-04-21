@@ -9,6 +9,12 @@ import node from '../assets/node.png'
 import mongo from '../assets/mongo.png'
 import java from '../assets/java.png'
 import flutter from '../assets/flutter.jpg'
+import github from '../assets/github.png'
+import linux from '../assets/linux.png';
+import cicd from '../assets/cicd.png';
+import docker from '../assets/docker.png';
+import awsec2 from '../assets/awsec2.png'
+
 
 const Skills = () => {
   return (
@@ -26,6 +32,13 @@ const Skills = () => {
         <div className="skill-card"><img src={mongo} alt="" /><span>MongoDB</span></div>
         <div className="skill-card"><img src={java} alt="" /><span>Java</span></div>
         <div className="skill-card"><img src={flutter} alt="" /><span>Flutter</span></div>
+        <div className="skill-card"><img src={linux} alt="" /><span>Linux</span></div>
+        <div className="skill-card"><img src={docker} alt="" /><span>Docker</span></div>
+        <div className="skill-card"><img src={cicd} alt="" /><span>CICD</span></div>
+        <div className="skill-card"><img src={awsec2} alt="" /><span>AWSEc2</span></div>
+        <div className="skill-card"><img src={github} alt="" /><span>Github</span></div>
+        
+
 
       </div>
 
