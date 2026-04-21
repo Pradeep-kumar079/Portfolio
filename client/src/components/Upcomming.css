@@ -1,152 +1,108 @@
-.roadmap-section{
-  margin-top:30px;
-  padding:100px 80px;
-  background-color:#c2d0c8;
-  border-radius:8px;
+.roadmap-section {
+  padding: var(--section-pad);
+  background: var(--bg-2);
+  border-radius: var(--radius-xl);
+  margin-top: 0;
 }
 
-.roadmap-section h2{
-  text-align:center;
-  font-size:38px;
-  color:#104629;
-  margin-bottom:70px;
+.roadmap-section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-bottom: clamp(40px, 5vw, 72px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
-/* TIMELINE */
-.timeline{
-  position:relative;
-  max-width:800px;
-  margin:auto;
+.roadmap-section h2 svg,
+.roadmap-section h2 .icon {
+  color: var(--accent);
+  font-size: 1.2rem;
 }
 
-/* LINE */
-.timeline::before{
-  content:"";
-  position:absolute;
-  left:10px;
-  top:0;
-  bottom:0;
-  width:4px;
-  background:#104629;
+.timeline {
+  position: relative;
+  max-width: 680px;
+  margin: 0 auto;
 }
 
-/* ITEM */
-.timeline-item{
-  display:flex;
-  gap:30px;
-  margin-bottom:60px;
-  position:relative;
+/* Vertical line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 17px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent), rgba(74,222,128,0.1));
 }
 
-/* DOT */
-.dot{
-  width:22px;
-  height:22px;
-  background:#104629;
-  border-radius:50%;
-  flex-shrink:0;
-  margin-top:8px;
+.timeline-item {
+  display: flex;
+  gap: 28px;
+  margin-bottom: 28px;
+  position: relative;
 }
 
-/* CONTENT */
-.content{
-  background:white;
-  padding:22px 28px;
-  width:100%;
-  border-radius:16px;
-  box-shadow:0 15px 35px rgba(0,0,0,.12);
-  transition:.3s;
+.timeline-item:last-child { margin-bottom: 0; }
+
+/* Dot */
+.dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--bg-2);
+  border: 2px solid var(--accent);
+  flex-shrink: 0;
+  margin-top: 18px;
+  position: relative;
+  z-index: 1;
+  transition: background 0.2s, box-shadow 0.2s;
 }
 
-.content:hover{
-  transform:translateY(-6px);
+.timeline-item:hover .dot {
+  background: var(--accent);
+  box-shadow: 0 0 12px rgba(74,222,128,0.4);
 }
 
-.content h3{
-  color:#104629;
-  margin-bottom:8px;
+/* Content box */
+.content {
+  flex: 1;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 18px 22px;
+  border-radius: var(--radius-md);
+  transition: border-color 0.22s, transform 0.22s var(--ease);
 }
 
-.content p{
-  color:#374151;
-  line-height:1.7;
+.content:hover {
+  border-color: rgba(74,222,128,0.25);
+  transform: translateX(4px);
 }
 
-/* =========================
-   📱 TABLET
-========================= */
-@media (max-width:900px){
-
-  .roadmap-section{
-    padding:70px 40px;
-  }
-
-  .roadmap-section h2{
-    font-size:32px;
-    margin-bottom:50px;
-  }
-
-  .timeline-item{
-    gap:20px;
-  }
-
+.content h3 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
 }
 
-/* =========================
-   📱 MOBILE
-========================= */
-@media (max-width:600px){
-
-  .roadmap-section{
-    padding:50px 20px;
-  }
-
-  .roadmap-section h2{
-    font-size:26px;
-    margin-bottom:40px;
-  }
-
-  .timeline::before{
-    left:7px;
-  }
-
-  .dot{
-    width:16px;
-    height:16px;
-  }
-
-  .timeline-item{
-    gap:15px;
-    margin-bottom:35px;
-  }
-
-  .content{
-    padding:16px 18px;
-    border-radius:12px;
-  }
-
-  .content h3{
-    font-size:17px;
-  }
-
-  .content p{
-    font-size:14px;
-    line-height:1.5;
-  }
-
+.content p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
 }
 
-/* =========================
-   📱 VERY SMALL MOBILE
-========================= */
-@media (max-width:400px){
-
-  .content h3{
-    font-size:15px;
-  }
-
-  .content p{
-    font-size:13px;
-  }
-
+@media (max-width: 600px) {
+  .roadmap-section { padding: 52px 20px; }
+  .timeline-item { gap: 18px; }
+  .content { padding: 14px 16px; }
+  .content h3 { font-size: 0.95rem; }
+  .content p { font-size: 0.82rem; }
 }

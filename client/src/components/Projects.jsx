@@ -1,156 +1,69 @@
 import React, { useState } from 'react'
 import './Projects.css'
 
-const Projects = () => {
+const projects = {
+  ecommerce: {
+    label: "E-Commerce",
+    title: "Full-Stack E-Commerce Platform",
+    description: "A complete e-commerce web application enabling users to browse products, manage their cart, and complete secure purchases. Includes user authentication, product filtering, order processing, payment integration, and an admin panel — all built around real-world shopping workflows.",
+    stack: ["React", "Node.js", "Express", "MongoDB", "JavaScript", "CSS"],
+    link: "https://e-commerce-frontend-u0z8.onrender.com",
+  },
+  alumni: {
+    label: "Alumni Network",
+    title: "Alumni Management Platform",
+    description: "A social networking platform bridging students and alumni for mentorship, real-time messaging, and collaboration. Features connection requests, post sharing, likes & comments, event updates, and a full admin dashboard for user and content management.",
+    stack: ["React", "Node.js", "Express", "MongoDB", "Socket.io", "CSS"],
+    link: "https://kitalumni-frontend.onrender.com/",
+  },
+  travel: {
+    label: "Travel Booking",
+    title: "Travel Booking Application",
+    description: "A full-stack bus booking platform with real-time seat selection and locking, dynamic fare calculation, payment gateway integration, booking confirmation, and booking history — modelled after production travel services.",
+    stack: ["React", "Node.js", "Express", "MongoDB", "Payment API", "CSS"],
+    link: "https://travels-frontend.onrender.com",
+  },
+}
 
-  const [activeProject, setActiveProject] = useState("ecommerce")
+const Projects = () => {
+  const [active, setActive] = useState("ecommerce")
+  const p = projects[active]
 
   return (
-    <div className='container' id='projects'>
-      
+    <section className="projects-section" id="projects">
+      <h2>My <span>Works</span></h2>
 
-      <div className="left">
-
-        <div 
-          className={activeProject === "ecommerce" ? "item active" : "item"}
-          onClick={() => setActiveProject("ecommerce")}
-        >
-          E-commerce
-        </div>
-
-        <div 
-          className={activeProject === "alumni" ? "item active" : "item"}
-          onClick={() => setActiveProject("alumni")}
-        >
-          Alumni
-        </div>
-
-        <div 
-          className={activeProject === "travel" ? "item active" : "item"}
-          onClick={() => setActiveProject("travel")}
-        >
-          Travel
-        </div>
-
+      <div className="projects-tabs">
+        {Object.entries(projects).map(([key, val]) => (
+          <button
+            key={key}
+            className={`tab-btn ${active === key ? "active" : ""}`}
+            onClick={() => setActive(key)}
+          >
+            {val.label}
+          </button>
+        ))}
       </div>
 
-      <div className="right">
+      <div key={active} className="project-card">
+        <div className="project-card-label">{p.label}</div>
+        <h3>{p.title}</h3>
+        <p>{p.description}</p>
 
-        <h3>My Works</h3>
-
-
-        {activeProject === "ecommerce" && (
-          <div>
-             <div className="project">
-          <h3>E-Commerce Website</h3>
-
-          <div className="project-container">
-            
-
-            <div className="project-text">
-              <p>
-                  A full-stack e-commerce web application that enables users to browse products, view detailed descriptions, add items to the cart, and complete secure online purchases. The platform is designed to deliver a smooth and intuitive shopping experience with a focus on performance, usability, and scalability.
-                  Key features include user authentication, product listing and filtering, cart and checkout management, order processing, payment integration, and an admin panel for managing products, orders, and users. The application follows real-world e-commerce workflows and is built with a responsive frontend and a robust backend.
-              </p>
-
-              <p className="tech">
-                <strong>Tech Stack:</strong> React, Node.js, Express, MongoDB,
-                HTML, CSS, JavaScript
-              </p>
-
-              <a
-                href="https://e-commerce-frontend-u0z8.onrender.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View Project →
-              </a>
-            </div>
-
-          </div>
+        <div className="project-tech">
+          {p.stack.map(t => (
+            <span key={t} className="tech-chip">{t}</span>
+          ))}
         </div>
 
-          </div>
-        )}
-
-        {activeProject === "alumni" && (
-          <div>
-            <div className="project">
-          <h3>Alumni Management </h3>
-
-          <div className="project-container">
-             
-            <div className="project-text">
-              <p>
-                A full-stack web application designed to bridge the gap between students and alumni by providing a centralized platform for networking, communication, and collaboration. The system enables students to connect with alumni based on batch, branch, and interests, fostering mentorship and career guidance.
-
-                The platform includes features such as user authentication, alumni–student connection requests, real-time messaging, post sharing, likes and comments, event and opportunity updates, and an admin dashboard for managing users, content, and reports. Built with a scalable backend and a responsive frontend, the project focuses on usability, performance, and real-world social networking workflows.
-
-              </p>
-
-              <p className="tech">
-                <strong>Tech Stack:</strong> React, Node.js, Express, MongoDB,
-                HTML, CSS, JavaScript
-              </p>
-
-              <a
-                href="https://kitalumni-frontend.onrender.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View Project →
-              </a>
-            </div>
-          </div>
-
-
-        </div>
-
-          </div>
-        )}
-
-        {activeProject === "travel" && (
-          <div>
-            <div className="project">
-          <h3>Travel Website</h3>
-
-          <div className="project-container">
-            
-
-            <div className="project-text">
-              <p>
-                  A full-stack travel booking web application that allows users to search buses, select seats in real time, enter passenger details, and complete secure online payments. The platform focuses on providing a smooth and user-friendly booking experience similar to real-world travel services.
-                  Key features include dynamic bus search, seat availability and locking, fare calculation, user authentication, payment gateway integration, booking confirmation, and booking history management. The application is built with a scalable backend and a responsive frontend, ensuring reliability, performance, and ease of use across devices.
-
-
-                                        
-              </p>
-
-              <p className="tech">
-                <strong>Tech Stack:</strong> React, Node.js, Express, MongoDB,
-                HTML, CSS, JavaScript
-              </p>
-
-              <a
-                href="https://travels-frontend.onrender.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View Project →
-              </a>
-            </div>
-
-
-          </div>
-        </div>
-
-
-          </div>
-        )}
-
+        <a href={p.link} target="_blank" rel="noopener noreferrer" className="project-link">
+          View Project
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </a>
       </div>
-
-    </div>
+    </section>
   )
 }
 

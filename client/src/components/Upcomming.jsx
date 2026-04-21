@@ -25,6 +25,13 @@ const Upcomming = () => {
             <p>Implementing authentication, Firestore database and file uploads.</p>
           </div>
         </div>
+        <div className="timeline-item">
+          <div className="dot"></div>
+          <div className="content">
+            <h3>devops Integration</h3>
+            <p>linux docker, github actions awsec2 a.</p>
+          </div>
+        </div>
 
         <div className="timeline-item">
           <div className="dot"></div>
