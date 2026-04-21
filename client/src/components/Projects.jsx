@@ -14,7 +14,7 @@ const projects = {
     title: "Alumni Management Platform",
     description: "A social networking platform bridging students and alumni for mentorship, real-time messaging, and collaboration. Features connection requests, post sharing, likes & comments, event updates, and a full admin dashboard for user and content management.",
     stack: ["React", "Node.js", "Express", "MongoDB", "Socket.io", "CSS"],
-    link: "https://kitalumni-frontend.onrender.com/",
+    link: "https://pradeepkumar.site/",
   },
   travel: {
     label: "Travel Booking",
