@@ -7,10 +7,10 @@ const Poster = () => {
     <div className='poster'>
       <div className="poster-content">
         <div className="poster-eyebrow">Full Stack Developer</div>
-        <h1 className="poster-title">
+        {/* <h1 className="poster-title">
           Hey, I'm<br />
           <span className="highlight">Pradeep Kumar</span>
-        </h1>
+        </h1> */}
         <p className="poster-subtitle">
           I build scalable web applications and mobile experiences — from concept to deployment. MERN Stack · Flutter · Java.
         </p>
