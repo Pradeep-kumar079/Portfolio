@@ -1,5 +1,6 @@
 import React from 'react'
 import './Contact.css'
+import image from '../assets/poster.png'
 
 const EmailIcon = () => (
   <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -74,7 +75,7 @@ const Contact = () => {
         {/* Right column — image */}
         <div className="img">
           <img
-            src="/assets/poster.png"
+            src={image}
             alt="Pradeep Kumar — Vibe Coder"
           />
         </div>
