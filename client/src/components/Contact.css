@@ -1,11 +1,15 @@
-.contact-section {
+/* ── SECTION ─────────────────────────────────────────── */
+
+.contact {
   padding: clamp(70px, 8vw, 120px) clamp(20px, 6vw, 80px);
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
 }
 
-.vibe-container {
+/* ── GRID ────────────────────────────────────────────── */
+
+.contact__grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   align-items: center;
@@ -14,14 +18,14 @@
 
 /* ── LEFT COLUMN ─────────────────────────────────────── */
 
-.vibe-left {
+.contact__content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-/* Pill */
-.contact-pill {
+/* Badge / Pill */
+.contact__badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -38,7 +42,7 @@
   margin-bottom: 24px;
 }
 
-.contact-pill::before {
+.contact__badge::before {
   content: "";
   width: 7px;
   height: 7px;
@@ -48,7 +52,7 @@
 }
 
 /* Heading */
-.contact-title {
+.contact__heading {
   font-family: var(--font-display, 'Playfair Display', serif);
   font-size: clamp(2.2rem, 4.5vw, 3.8rem);
   font-weight: 700;
@@ -58,21 +62,12 @@
   margin: 0 0 16px;
 }
 
-.contact-title span {
+.contact__heading-accent {
   color: #c46c37;
 }
 
-/* Divider */
-.contact-divider {
-  width: 48px;
-  height: 2px;
-  background: #e8e2d9;
-  margin: 16px 0 20px;
-  border: none;
-}
-
 /* Tagline */
-.vibe-tagline {
+.contact__tagline {
   font-size: clamp(0.95rem, 1.3vw, 1.05rem);
   line-height: 1.9;
   color: #6b5f52;
@@ -80,20 +75,29 @@
   margin: 0;
 }
 
-.vibe-tagline strong {
+.contact__tagline strong {
   color: #1c1510;
   font-weight: 600;
 }
 
-/* Meta info (email / linkedin) */
-.contact-meta {
+/* Divider */
+.contact__divider {
+  width: 48px;
+  height: 2px;
+  background: #e8e2d9;
+  margin: 16px 0 20px;
+  border: none;
+}
+
+/* Meta links (email / linkedin) */
+.contact__meta {
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-top: 20px;
 }
 
-.contact-meta-row {
+.contact__meta-link {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -104,26 +108,27 @@
   transition: color 0.2s;
 }
 
-.contact-meta-row:hover {
+.contact__meta-link:hover {
   color: #c46c37;
 }
 
-.contact-meta-row svg {
+.contact__meta-link svg {
   width: 14px;
   height: 14px;
   fill: #c46c37;
   flex-shrink: 0;
 }
 
-/* CTA buttons */
-.vibe-cta-row {
+/* ── CTA BUTTONS ─────────────────────────────────────── */
+
+.contact__actions {
   display: flex;
   gap: 12px;
   margin-top: 28px;
   flex-wrap: wrap;
 }
 
-.vibe-cta {
+.contact__btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -138,77 +143,77 @@
   white-space: nowrap;
 }
 
-.vibe-cta:active {
+.contact__btn:active {
   transform: scale(0.97);
 }
 
-.vibe-cta.primary {
+.contact__btn--primary {
   background: #1c1510;
   color: #ffffff;
   border: 1px solid #1c1510;
 }
 
-.vibe-cta.primary:hover {
+.contact__btn--primary:hover {
   background: #c46c37;
   border-color: #c46c37;
 }
 
-.vibe-cta.ghost {
+.contact__btn--ghost {
   background: transparent;
   color: #6b5f52;
   border: 1px solid #e8e2d9;
 }
 
-.vibe-cta.ghost:hover {
+.contact__btn--ghost:hover {
   border-color: #c46c37;
   color: #1c1510;
 }
 
 /* ── RIGHT COLUMN — IMAGE ────────────────────────────── */
 
-.img {
+.contact__image-wrap {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.img img {
+.contact__image {
   width: clamp(240px, 28vw, 400px);
   max-width: 100%;
   border-radius: var(--border-radius-lg, 12px);
   transition: transform 0.35s ease;
 }
 
-.img img:hover {
+.contact__image:hover {
   transform: translateY(-6px);
 }
 
 /* ── RESPONSIVE — TABLET ─────────────────────────────── */
 
 @media (max-width: 900px) {
-  .vibe-container {
+  .contact__grid {
     grid-template-columns: 1fr;
     gap: 48px;
   }
 
-  .vibe-left {
+  .contact__content {
     align-items: center;
     text-align: center;
   }
 
-  .vibe-tagline {
+  .contact__tagline {
     max-width: 100%;
   }
 
-  .contact-meta {
+  .contact__meta {
     align-items: center;
   }
 
-  .vibe-cta-row {
+  .contact__actions {
     justify-content: center;
   }
 
-  .img {
+  .contact__image-wrap {
     order: -1;
   }
 }
@@ -216,35 +221,35 @@
 /* ── RESPONSIVE — MOBILE ─────────────────────────────── */
 
 @media (max-width: 600px) {
-  .contact-section {
+  .contact {
     padding: 60px 20px;
   }
 
-  .contact-title {
+  .contact__heading {
     font-size: 2rem;
   }
 
-  .vibe-tagline {
+  .contact__tagline {
     font-size: 0.92rem;
     line-height: 1.8;
   }
 
-  .vibe-cta-row {
+  .contact__actions {
     flex-direction: column;
     width: 100%;
   }
 
-  .vibe-cta {
+  .contact__btn {
     width: 100%;
     justify-content: center;
     padding: 12px 20px;
   }
 
-  .img img {
+  .contact__image {
     width: 260px;
   }
 
-  .contact-pill {
+  .contact__badge {
     font-size: 0.65rem;
     padding: 6px 14px;
   }

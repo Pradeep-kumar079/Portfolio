@@ -17,29 +17,29 @@ const LinkedInIcon = () => (
 
 const Contact = () => {
   return (
-    <section className="contact-section" id="contact">
-      <div className="vibe-container">
+    <section className="contact" id="contact">
+      <div className="contact__grid">
 
         {/* Left column */}
-        <div className="vibe-left">
-          <div className="contact-pill">Let's Work Together</div>
+        <div className="contact__content">
+          <div className="contact__badge">Let's Work Together</div>
 
-          <h2 className="contact-title">
+          <h2 className="contact__heading">
             Vibe Coder.<br />
-            <span>Impact Builder.</span>
+            <span className="contact__heading-accent">Impact Builder.</span>
           </h2>
 
-          <p className="vibe-tagline">
+          <p className="contact__tagline">
             I don't just build applications — <strong>I build impact.</strong><br />
             As a Vibe Coder, I transform imagination into intelligent,
             user-friendly products that make a real difference.
           </p>
 
-          <hr className="contact-divider" />
+          <hr className="contact__divider" />
 
           {/* Contact meta */}
-          <div className="contact-meta">
-            <a href="mailto:pradeepk9348@gmail.com" className="contact-meta-row">
+          <div className="contact__meta">
+            <a href="mailto:pradeepk9348@gmail.com" className="contact__meta-link">
               <EmailIcon />
               pradeepk9348@gmail.com
             </a>
@@ -47,7 +47,7 @@ const Contact = () => {
               href="https://www.linkedin.com/in/pradeep-kumar-56688725b/"
               target="_blank"
               rel="noreferrer"
-              className="contact-meta-row"
+              className="contact__meta-link"
             >
               <LinkedInIcon />
               linkedin.com/in/pradeep-kumar-56688725b
@@ -55,8 +55,8 @@ const Contact = () => {
           </div>
 
           {/* CTA buttons */}
-          <div className="vibe-cta-row">
-            <a href="mailto:pradeepk9348@gmail.com" className="vibe-cta primary">
+          <div className="contact__actions">
+            <a href="mailto:pradeepk9348@gmail.com" className="contact__btn contact__btn--primary">
               <EmailIcon />
               Email me
             </a>
@@ -64,7 +64,7 @@ const Contact = () => {
               href="https://www.linkedin.com/in/pradeep-kumar-56688725b/"
               target="_blank"
               rel="noreferrer"
-              className="vibe-cta ghost"
+              className="contact__btn contact__btn--ghost"
             >
               <LinkedInIcon />
               LinkedIn
@@ -73,8 +73,9 @@ const Contact = () => {
         </div>
 
         {/* Right column — image */}
-        <div className="img">
+        <div className="contact__image-wrap">
           <img
+            className="contact__image"
             src={image}
             alt="Pradeep Kumar — Vibe Coder"
           />
