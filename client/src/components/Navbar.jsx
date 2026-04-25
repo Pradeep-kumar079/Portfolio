@@ -16,11 +16,20 @@ const Navbar = () => {
   useEffect(() => {
     if (!menuOpen) return;
     const handler = (e) => {
-      if (!e.target.closest(".navbar")) setMenuOpen(false);
+      if (!e.target.closest(".nav-container")) setMenuOpen(false);
     };
     document.addEventListener("mousedown", handler);
     return () => document.removeEventListener("mousedown", handler);
   }, [menuOpen]);
+
+  // Close drawer on resize to desktop
+  useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth > 768) setMenuOpen(false);
+    };
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
 
   const handleNav = (href) => {
     setActiveLink(href);
@@ -35,8 +44,8 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="nav-container">
-      <nav className={`navbar ${scrolled ? "scrolled" : ""} ${menuOpen ? "menu-open" : ""}`}>
+    <div className={`nav-container ${scrolled ? "scrolled" : ""}`}>
+      <nav className="navbar">
 
         {/* Logo */}
         <a href="#" className="logo" onClick={() => handleNav("")}>
@@ -45,7 +54,7 @@ const Navbar = () => {
         </a>
 
         {/* Desktop links */}
-        <ul className="nav-links desktop-links">
+        <ul className="desktop-links">
           {links.map(({ href, label }) => (
             <li key={href}>
               <a
@@ -59,10 +68,15 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* CTA + Hamburger */}
+        {/* Right — divider + CTA + hamburger */}
         <div className="nav-right">
-          <a href="#contact" className="nav-cta" onClick={() => handleNav("#contact")}>
-            Hire Me
+          <span className="nav-divider" />
+          <a
+            href="#contact"
+            className="nav-cta"
+            onClick={() => handleNav("#contact")}
+          >
+            Hire me
           </a>
           <button
             className={`hamburger ${menuOpen ? "active" : ""}`}
@@ -77,8 +91,11 @@ const Navbar = () => {
         </div>
 
         {/* Mobile drawer */}
-        <div className={`mobile-drawer ${menuOpen ? "open" : ""}`} aria-hidden={!menuOpen}>
-          <ul className="nav-links mobile-links">
+        <div
+          className={`mobile-drawer ${menuOpen ? "open" : ""}`}
+          aria-hidden={!menuOpen}
+        >
+          <ul className="mobile-links">
             {links.map(({ href, label }) => (
               <li key={href}>
                 <a
@@ -91,8 +108,12 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <a href="#contact" className="mobile-cta" onClick={() => handleNav("#contact")}>
-            Hire Me
+          <a
+            href="#contact"
+            className="mobile-cta"
+            onClick={() => handleNav("#contact")}
+          >
+            Hire me
           </a>
         </div>
 
