@@ -1,7 +1,7 @@
 import React from "react";
 import "./Poster.css";
 import resume from "../assets/Kit_Cse_Pradeep_MernStack.pdf";
-import profileImg from "../assets/Gemini_Generated_Image_43bhbb43bhbb43bh-removebg-preview.png";
+import profileImg from "../assets/Poster.png";
 
 const Poster = () => {
   return (
