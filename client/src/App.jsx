@@ -1,10 +1,10 @@
-import React from 'react'
-import Navbar from './components/Navbar'
+// import React from 'react'
+// import Navbar from './components/Navbar'
 import Card from './components/Card'
-import About from './components/About'
+// import About from './components/About'
 // import Certificate from './components/Certificate'
-import Contact from './components/Contact'
-import Projects from './components/Projects'
+// import Contact from './components/Contact'
+// import Projects from './components/Projects'
 
 const App = () => {
   return (
