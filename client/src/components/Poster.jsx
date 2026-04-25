@@ -1,7 +1,7 @@
 import React from "react";
 import "./Poster.css";
 import resume from "../assets/Kit_Cse_Pradeep_MernStack.pdf";
-import profileImg from "../assets/Poster.png";
+import profileImg from "../assets/poster.png";
 
 const Poster = () => {
   return (
