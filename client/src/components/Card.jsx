@@ -1,5 +1,5 @@
 import React from 'react'
-import './Card.css'
+// import './Card.css'
 import Navbar from './Navbar'
 import About from './About'
 import Projects from './Projects'
