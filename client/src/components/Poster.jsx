@@ -1,104 +1,100 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import "./Poster.css";
 import resume from "../assets/Kit_Cse_Pradeep_MernStack.pdf";
 import profileImg from "../assets/poster.png";
 
 const Poster = () => {
-  const titleRef = useRef(null);
-
   useEffect(() => {
-    const els = document.querySelectorAll(".poster-animate");
+    const els = document.querySelectorAll(".p-anim");
     els.forEach((el, i) => {
-      el.style.animationDelay = `${i * 0.12}s`;
-      el.classList.add("poster-animate--in");
+      el.style.animationDelay = `${0.1 + i * 0.13}s`;
+      el.classList.add("p-anim--in");
     });
   }, []);
 
+  const stack = ["MERN Stack", "Flutter", "Java"];
+
   return (
     <section className="poster">
-      {/* Background image layer */}
+      {/* Background image */}
       <div className="poster-bg" aria-hidden="true">
         <img src={profileImg} alt="" className="poster-bg-img" />
         <div className="poster-bg-overlay" />
-        <div className="poster-bg-fade" />
-        <div className="poster-bg-vignette" />
+        <div className="poster-bg-fade-bottom" />
+        <div className="poster-bg-fade-right" />
       </div>
 
-      {/* Floating code snippets decoration */}
-      <div className="poster-deco" aria-hidden="true">
-        <span className="deco-tag deco-tag--1">{"<Developer />"}</span>
-        <span className="deco-tag deco-tag--2">{"{ MERN }"}</span>
-        <span className="deco-tag deco-tag--3">{"Flutter()"}</span>
-      </div>
-
-      {/* Main content */}
+      {/* Content */}
       <div className="poster-content">
         <div className="poster-left">
 
-          <div className="poster-eyebrow poster-animate">
+          {/* Eyebrow */}
+          <div className="poster-eyebrow p-anim">
             <span className="eyebrow-dot" />
-            Available for Work
+            Full Stack Developer
           </div>
 
-          <h1 className="poster-title poster-animate" ref={titleRef}>
-            Hey, I'm <br />
-            <span className="highlight">Pradeep<br className="title-break" /> Kumar</span>
+          {/* Heading */}
+          <h1 className="poster-title p-anim">
+            Hey, I'm<br />
+            <span className="poster-title-name">Pradeep Kumar</span>
           </h1>
 
-          <p className="poster-subtitle poster-animate">
-            I craft scalable web apps & mobile experiences —
-            from pixel-perfect UI to production-ready APIs.
+          {/* Subtitle */}
+          <p className="poster-subtitle p-anim">
+            I build scalable web applications &amp; mobile
+            experiences — from concept to deployment.
           </p>
 
-          <div className="poster-stack poster-animate">
-            {["MERN Stack", "Flutter", "Java"].map((tech) => (
-              <span key={tech} className="stack-pill">{tech}</span>
+          {/* Stack pills */}
+          <div className="poster-stack p-anim">
+            {stack.map((t) => (
+              <span key={t} className="stack-pill">{t}</span>
             ))}
           </div>
 
-          <div className="poster-actions poster-animate">
-            <a href={resume} download className="resume-btn">
-              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
-                <path d="M7.5 2v8M4.5 7.5l3 3 3-3M2 12h11"
-                  stroke="currentColor" strokeWidth="1.5"
+          {/* Actions */}
+          <div className="poster-actions p-anim">
+            <a href={resume} download className="btn-primary">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M7 2v7M4.5 7l2.5 2.5L9.5 7M2 12h10"
+                  stroke="currentColor" strokeWidth="1.6"
                   strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
               Download Resume
             </a>
-            <a href="#projects" className="view-work-btn">
-              View My Work
+            <a href="#projects" className="btn-secondary">
+              View Work
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                <path d="M3 7h8M8 4l3 3-3 3"
-                  stroke="currentColor" strokeWidth="1.5"
+                <path d="M3 7h8M8 4.5l2.5 2.5L8 9.5"
+                  stroke="currentColor" strokeWidth="1.6"
                   strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </a>
           </div>
 
-          {/* Stats row */}
-          <div className="poster-stats poster-animate">
+          {/* Stats */}
+          <div className="poster-stats p-anim">
             {[
-              { number: "2+", label: "Years Exp." },
-              { number: "15+", label: "Projects" },
-              { number: "10+", label: "Technologies" },
-            ].map(({ number, label }) => (
-              <div key={label} className="stat-item">
-                <span className="stat-number">{number}</span>
-                <span className="stat-label">{label}</span>
+              { n: "2+",  l: "Years Exp." },
+              { n: "15+", l: "Projects"   },
+              { n: "10+", l: "Technologies" },
+            ].map(({ n, l }) => (
+              <div key={l} className="stat-item">
+                <span className="stat-number">{n}</span>
+                <span className="stat-label">{l}</span>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Right side — subtle profile card on larger screens */}
-        <div className="poster-right poster-animate" aria-hidden="true">
+        {/* Profile card — desktop only */}
+        <div className="poster-right p-anim" aria-hidden="true">
           <div className="profile-card">
-            <div className="profile-card-inner">
-              <img src={profileImg} alt="Pradeep Kumar" className="profile-card-img" />
-              <div className="profile-card-badge">
-                <span className="badge-dot" />
-                Open to Opportunities
-              </div>
+            <img src={profileImg} alt="Pradeep Kumar" className="profile-card-img" />
+            <div className="profile-card-footer">
+              <span className="profile-status-dot" />
+              Open to Opportunities
             </div>
           </div>
         </div>
@@ -106,9 +102,7 @@ const Poster = () => {
 
       {/* Scroll cue */}
       <div className="poster-scroll-hint" aria-hidden="true">
-        <div className="scroll-mouse">
-          <span className="scroll-dot" />
-        </div>
+        <div className="scroll-mouse"><span className="scroll-dot" /></div>
         <span>Scroll</span>
       </div>
     </section>
