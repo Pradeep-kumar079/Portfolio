@@ -7,7 +7,7 @@ const projects = {
     title: "Full-Stack E-Commerce Platform",
     description:
       "A complete e-commerce web application enabling users to browse products, manage their cart, and complete secure purchases. Includes user authentication, product filtering, order processing, payment integration, and an admin panel — all built around real-world shopping workflows.",
-    stack: ["React", "Node.js", "Express", "MongoDB", "JavaScript", "CSS"],
+    stack: ["React", "Node.js", "Express", "MongoDB", "JavaScript", "CSS","JusPay Payment API"],
     link: "https://e-commerce-frontend-u0z8.onrender.com",
     number: "01",
   },
@@ -16,7 +16,7 @@ const projects = {
     title: "Alumni Management Platform",
     description:
       "A social networking platform bridging students and alumni for mentorship, real-time messaging, and collaboration. Features connection requests, post sharing, likes & comments, event updates, and a full admin dashboard for user and content management.",
-    stack: ["React", "Node.js", "Express", "MongoDB", "Socket.io", "CSS"],
+    stack: ["React", "Node.js", "Express", "MongoDB", "Socket.io", "CSS","Docker","Github Workflows", "CICD" , "AWS Ec2 Instance" , "Linux"],
     link: "https://pradeepkumar.site/",
     number: "02",
   },
